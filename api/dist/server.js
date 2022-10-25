@@ -51,4 +51,15 @@ server.post('/book', (req, res) => __awaiter(void 0, void 0, void 0, function* (
         res.send('Failure');
     }
 }));
+server.delete('/book/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    try {
+        yield Book.deleteOne({ _id: id });
+        res.send('Success');
+    }
+    catch (error) {
+        console.log(error);
+        res.send('Failure');
+    }
+}));
 module.exports = server;

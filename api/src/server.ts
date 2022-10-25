@@ -49,5 +49,18 @@ server.post('/book', async (req: Request, res: Response) => {
 
 })
 
+server.delete('/book/:id', async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  try {
+    await Book.deleteOne({ _id: id })
+
+    res.send('Success')
+  } catch (error) {
+    console.log(error);
+    res.send('Failure')
+  }
+
+})
 
 module.exports = server;
