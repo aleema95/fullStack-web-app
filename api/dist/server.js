@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose = require('mongoose');
+const Book = require('./models/Book');
 const server = (0, express_1.default)();
 mongoose
     .connect('mongodb://localhost:27017/myTestDb')
@@ -23,7 +24,6 @@ mongoose
     .catch((err) => {
     console.log(err);
 });
-const Book = require('./models/Book');
 server.get('/', (req, res) => {
     res.send('hola');
 });
@@ -35,6 +35,20 @@ server.get('/books', (req, res) => __awaiter(void 0, void 0, void 0, function* (
     catch (error) {
         console.log(error);
         res.send(error);
+    }
+}));
+server.post('/book', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const newBook = yield Book({
+            title: 'Nombre',
+            author: 'Desc',
+        });
+        yield newBook.save();
+        res.send('Success');
+    }
+    catch (error) {
+        console.log(error);
+        res.send('Failure');
     }
 }));
 module.exports = server;

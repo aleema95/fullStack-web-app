@@ -1,5 +1,6 @@
 import express, {Application, Request, Response} from 'express';
 const mongoose = require('mongoose')
+const Book = require('./models/Book')
 
 const server: Application = express();
 
@@ -12,7 +13,6 @@ mongoose
     console.log(err);
   })
 
-const Book = require('./models/Book')
 
 server.get('/', (req: Request, res: Response) => {
   res.send('hola')
@@ -22,12 +22,31 @@ server.get('/books', async (req: Request, res: Response) => {
 
   try {
     const books = await Book.find()
+    
     res.send(books)
   } catch (error) {
     console.log(error);
     res.send(error)
   }
  
+})
+
+server.post('/book', async (req: Request, res: Response) => {
+
+  try {
+    const newBook = await Book({
+      title: 'Nombre',
+      author: 'Desc',
+    })
+
+    await newBook.save()
+    
+    res.send('Success')
+  } catch (error) {
+    console.log(error);
+    res.send('Failure')
+  }
+
 })
 
 
