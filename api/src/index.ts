@@ -17,7 +17,7 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./server.js');
+const server = require('./server.js'); 
 // const { PORT } = process.env
 
 // Syncing all the models at once.
