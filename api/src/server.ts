@@ -1,8 +1,8 @@
-import express from 'express';
+import express, {Application, Request, Response} from 'express';
 
-const server = express();
+const server: Application = express();
 
-server.get('/', (req, res) => {
+server.get('/', (req: Request, res: Response) => {
   res.send('hola')
 })
 
