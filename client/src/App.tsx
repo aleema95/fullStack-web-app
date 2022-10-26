@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { MouseEvent } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { getBooks } from './reducer/store/store';
+import { ActionGetAllBooks } from './reducer/actions/booksActions'
+import { useAppDispatch } from './reducer/hooks'
+ 
 function App() {
+  const dispatch = useAppDispatch()
+  const books = useSelector(getBooks)
+
+  const getAllBooksOnClick = (e: MouseEvent) => {
+    const target = e.target as HTMLButtonElement
+
+    dispatch(ActionGetAllBooks())
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <div>
+          {books.map( b => {
+            return (
+              <h1>{b.author}</h1>
+            )
+          })}
+        </div>
+        <button onClick={getAllBooksOnClick}>Traer Libros</button>
+      </div>
   );
 }
 
