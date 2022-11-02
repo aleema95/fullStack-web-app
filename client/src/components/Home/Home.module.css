@@ -1,0 +1,84 @@
+/* @import url('https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'); */
+
+.mainImg {
+  /* background-image: url('https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'); */
+  background-image: url('../../../assets/henry-be-lc7xcWebECc-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left -950px;
+  filter: contrast(105%) brightness(70%);
+  padding: 75px 50px 300px;
+  position: relative;
+}
+
+.middleImg {
+  /* background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'); */
+  position: absolute;
+  background-image: url('../../../assets/giammarco-zeH-ljawHtg-unsplash.jpg');
+  padding: 240px;
+  right: 200px;
+  border-radius: 15px;
+  border: 2.5px solid var(--primary-yellow-color);
+  background-repeat: no-repeat;
+  background-position: left -95px top 0px;
+  background-size: cover;
+  filter: contrast(110%) brightness(80%);
+}
+
+.titlesContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 280px;
+}
+
+.mainTitleContainer {
+  width: 900px;
+}
+
+.mainTitle {
+  color: var(--primary-yellow-color);
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.subTitleContainer {
+  width: 750px;
+}
+
+.subTitle {
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.blurRectangle {
+  position: absolute;
+  /* background-color: var(--primary-dark-color); */
+  background: rgba(23, 31, 31, 0.712);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  width: 750px;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurRectangle h2 {
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding: 20px 30px;
+
+}
+
+.bottomPlaceholder {
+  width: 100%;
+  height: 500px;
+  background-color: var(--secondary-dark-color);
+}

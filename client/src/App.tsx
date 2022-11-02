@@ -1,30 +1,17 @@
 import './App.css';
-import { MouseEvent } from 'react'
-import { useSelector } from 'react-redux'
-import { getBooks } from './reducer/store/store';
-import { ActionGetAllBooks } from './reducer/actions/booksActions'
-import { useAppDispatch } from './reducer/hooks'
- 
+import { Routes, Route, Link } from "react-router-dom"; 
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+
 function App() {
-  const dispatch = useAppDispatch()
-  const books = useSelector(getBooks)
 
-  const getAllBooksOnClick = (e: MouseEvent) => {
-    // const target = e.target as HTMLButtonElement
-
-    dispatch(ActionGetAllBooks())
-  }
 
   return (
       <div>
-        <div>
-          {books.map( b => {
-            return (
-              <h1>{b.author}</h1>
-            )
-          })}
-        </div>
-        <button onClick={getAllBooksOnClick}>Traer Libros</button>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
       </div>
   );
 }

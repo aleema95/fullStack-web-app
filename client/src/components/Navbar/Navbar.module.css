@@ -1,0 +1,22 @@
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white-color);
+  width: 100%;
+}
+
+.mainContainer h1 {
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.mainContainer h1:hover {
+  color: var(--primary-yellow-color);
+  cursor: pointer;
+}
+
+.navItemContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
