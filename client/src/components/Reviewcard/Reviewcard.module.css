@@ -1,0 +1,45 @@
+.cardContainer {
+  width: 750px;
+  height: 190px;
+  background-color: var(--secondary-dark-color) ;
+  filter: brightness(80%);
+  border-radius: 8px;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cardContainer h3 {
+  color: var(--primary-yellow-color);
+  align-self: flex-end;
+}
+
+.cardContainer h2, h3 {
+  color: var(--primary-yellow-color);
+}
+
+/*
+p {
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+*/
+
+.cardContainer p {
+  margin: 10px 0px ;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--white-color);
+}
+
+.ratingAndNameContainer {
+  display: flex;
+  justify-content: space-between;
+}

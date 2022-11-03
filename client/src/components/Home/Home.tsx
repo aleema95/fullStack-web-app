@@ -5,6 +5,8 @@ import s from './Home.module.css'
 // import { ActionGetAllBooks } from '../../reducer/actions/booksActions'
 // import { useAppDispatch } from '../../reducer/hooks'
 import Navbar from '../Navbar/Navbar';
+import Reviewcard from '../Reviewcard/Reviewcard';
+import Footer from '../Footer/Footer';
 
 export default function Home() {
   // const dispatch = useAppDispatch()
@@ -32,9 +34,17 @@ export default function Home() {
         </div>
         <div className={s.middleImg}></div>
       </div>
-      <div className={s.bottomPlaceholder}>
-      
+      <div className={s.bottomSide}>
+        <div className={s.secondSubtitleContainer}>
+          <h1>Look at some of the reviews from our users.</h1>
+        </div>
+        <div className={s.reviewCardsContainer}>
+          <Reviewcard />
+          <Reviewcard />
+          <Reviewcard />
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }

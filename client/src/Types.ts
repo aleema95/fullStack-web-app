@@ -4,3 +4,9 @@ export interface Book {
   author: string,
   title: string,
 }
+
+export interface ContactProps {
+  contactName: string,
+  iconName: string,
+  redirectUrl: string
+}
