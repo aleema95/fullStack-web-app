@@ -1,0 +1,106 @@
+.mainContainer {
+  display: flex;
+  position: relative;
+}
+
+.backBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--white-color);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.backBtn:hover {
+  color: var(--primary-yellow-color);
+
+}
+
+.leftSide {
+  width: 35%;
+  height: 100vh;
+  background-color: var(--primary-dark-color);
+  border-right: 2px solid var(--primary-yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 15px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.submitBtn {
+  width: 125px;
+  height: 45px;
+  align-self: flex-end;
+  border-radius: 5px;
+  background-color: var(--primary-yellow-color);
+  color: var(--primary-dark-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+}
+
+.submitBtn:hover {
+  background-color: var(--primary-dark-color);
+  color: var(--primary-yellow-color);
+}
+
+.inputLabelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputLabelContainer input {
+  height: 40px;
+  background-color: var(--primary-dark-color);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border-left: 1px solid var(--primary-yellow-color);
+  border-bottom: 1px solid var(--primary-yellow-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  text-indent: 8px;
+}
+
+.inputLabelContainer label {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--primary-yellow-color);
+}
+
+.formAndTitleContainer {
+  width: 85%;
+  height: 50%;
+}
+
+.formAndTitleContainer h1 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: var(--primary-yellow-color);
+}
+
+.logInFormContainer {
+  height: 350px;
+  background-color: var(--secondary-dark-color);
+  border-radius: 15px;
+  border: 2px solid var(--primary-yellow-color);
+}
+
+
+/* ================== RIGHT SIDE ===================*/
+
+.rightSide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/Login-img.jpg');
+  padding: 300px 32.5%;
+}

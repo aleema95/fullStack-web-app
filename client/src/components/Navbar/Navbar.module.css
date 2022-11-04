@@ -2,8 +2,15 @@
   display: flex;
   justify-content: space-between;
   color: var(--white-color);
+  text-decoration: none;
   width: 100%;
 }
+
+.mainContainer .navItem{
+  color: var(--white-color);
+  text-decoration: none;
+}
+
 
 .mainContainer h1 {
   font-weight: 400;

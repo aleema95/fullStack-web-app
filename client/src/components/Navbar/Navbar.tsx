@@ -1,4 +1,5 @@
 import s from './Navbar.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
 
@@ -10,7 +11,7 @@ export default function Navbar() {
         <h1>Home</h1>
         <h1>Library</h1>
       </div>
-      <h1>Log in</h1>
+       <Link className={s.navItem} to={'/login'}><h1>Log in</h1></Link>
     </div>
   )
 }
